@@ -1,7 +1,7 @@
 
 
 // array for cards
-var cards = [
+let cards = [
 
 {
 	rank: 'queen',
@@ -31,9 +31,9 @@ var cards = [
 
 // array for cards in play
 
-var cardsInPlay = [];
+let cardsInPlay = [];
 
-var checkForMatch = function() {
+let checkForMatch = function() {
 	// do they match?
 
 	if(cardsInPlay[0] === cardsInPlay[1]) {
@@ -44,7 +44,7 @@ var checkForMatch = function() {
 }
 
 
-var flipCard = function () {
+let flipCard = function () {
 	
 	cardID = this.getAttribute('data-id');
 	console.log(cardID);
@@ -75,11 +75,11 @@ var flipCard = function () {
 
 };
 
-var createBoard = function() {
+let createBoard = function() {
 
-	for (var i = 0; i < cards.length; i++) {
+	for (let i = 0; i < cards.length; i++) {
 
-		var cardElement = document.createElement('img');
+		let cardElement = document.createElement('img');
 
 		cardElement.setAttribute('src', "images/back.png");
 		cardElement.setAttribute('data-id', i);
